@@ -1,23 +1,13 @@
-//
-//  Cell.swift
-//  tableviewtask2
-//
-//  Created by MANSVITA on 01/09/22.
-//
 
 import UIKit
 
 class Cell: UITableViewCell {
-
-   
     
-    
+    //outlet
     @IBOutlet weak var lbl: UILabel!
-    
    
     override func awakeFromNib() {
-        super.awakeFromNib()
-       
+        super.awakeFromNib()   
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
