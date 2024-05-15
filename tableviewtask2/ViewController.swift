@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  tableviewtask2
-//
-//  Created by MANSVITA on 31/08/22.
-//
+
 import Foundation
 import UIKit
 
