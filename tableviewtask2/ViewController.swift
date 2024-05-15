@@ -7,17 +7,16 @@
 import Foundation
 import UIKit
 
-
-
 class ViewController: UIViewController{
    
+   //outlet
     @IBOutlet weak var txtone: UITextField!
-    
     @IBOutlet weak var lbltwo: UILabel!
     @IBOutlet weak var tableview: UITableView!
-    
-    var array = [String]()
-    
+   
+    //variable declaration
+    var array = [String]() 
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview.delegate = self
@@ -26,13 +25,14 @@ class ViewController: UIViewController{
        self.navigationItem.title = "UserList"
         if let data = UserDefaults.standard.object(forKey: "toarray") as? [String]{
             
-            array = data
-           txtone.text = "\(array.count)"
+          array = data
+          txtone.text = "\(array.count)"
             
-        }else{
+        } else {
            lbltwo.text = "no text here"
         }
     }
+   //Button action
 @IBAction func addbutton(_ sender: Any) {
         if txtone.text !=  nil{
             array.append(txtone.text!)
@@ -41,8 +41,7 @@ class ViewController: UIViewController{
             lbltwo.text = "No User Found"
             
             
-            if (txtone.text == ""){
-                
+            if (txtone.text == ""){       
             //
             var dialogMessage = UIAlertController(title: "Confirm", message: "please enetr user detail", preferredStyle: .alert)
             // Create OK button with action handler
@@ -57,6 +56,7 @@ class ViewController: UIViewController{
             
             dialogMessage.addAction(ok)
             dialogMessage.addAction(cancel)
+               
             // Present alert message to user
             self.present(dialogMessage, animated: true, completion: nil)
                 
@@ -126,7 +126,7 @@ extension ViewController :UITableViewDelegate,UITableViewDataSource {
 // logic odd even in swift
 
 //}
-// right ogic
+// right logic
 //        if (indexPath.row % 2 == 0){
 //            cell.lbl.text = self.array[indexPath.row]
 //            cell.lbl.textAlignment = .left
