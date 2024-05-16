@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  tableviewtask2
-//
-//  Created by MANSVITA on 31/08/22.
-//
 
 import UIKit
 import CoreData
